@@ -55,5 +55,6 @@ curl --request POST \
 ```
 
 ## Документация
+Ссылки (для доступа должен быть запущен сервис):
 - [Swagger UI](http://localhost:8080/swagger-ui)
 - [API Docs](http://localhost:8080/api-docs)
