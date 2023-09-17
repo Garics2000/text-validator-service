@@ -9,14 +9,6 @@ import java.util.List;
 @Slf4j
 @Service
 public class TextValidatorServiceImpl implements TextValidatorService {
-
-    /**
-     * Проверяет текст на соответствие заданному набору правил.
-     *
-     * @param text  Текстовая строка.
-     * @param rules Список правил для валидации.
-     * @return boolean Результат валидации текста по все заданным правилам.
-     */
     @Override
     public boolean validate(String text, List<ValidationRule> rules) {
         if (text == null || rules == null) {

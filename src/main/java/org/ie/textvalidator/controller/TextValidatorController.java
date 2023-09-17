@@ -40,12 +40,6 @@ public class TextValidatorController {
         );
     }
 
-    /**
-     * Проверяет корректность скобок в тексте на соответствие заданному набору правил.
-     *
-     * @param request JSON объект с полем "text".
-     * @return boolean результат проверки.
-     */
     @Operation(summary = "Проверяет валидность скобок в тексте")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Результат валидации текста в JSON формате.",

@@ -2,9 +2,6 @@ package org.ie.textvalidator.rules.brackets;
 
 import org.ie.textvalidator.rules.ValidationRule;
 
-/**
- * Правило валидации содержимого скобок
- */
 public class BracketsContentRule implements ValidationRule {
 
     /**

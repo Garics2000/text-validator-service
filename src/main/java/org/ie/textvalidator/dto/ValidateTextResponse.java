@@ -4,9 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-/**
- * Класс объекта http ответа с результатом валидации
- */
 @Data
 @AllArgsConstructor
 public class ValidateTextResponse {
