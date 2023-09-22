@@ -18,14 +18,9 @@ public class BracketsPairRule implements ValidationRule {
         int count = 0;
 
         for (char c : text.toCharArray()) {
-            if (c == '(') {
-                count++;
-            } else if (c == ')') {
-                count--;
-                if (count < 0) {
-                    return false;
-                }
-            }
+            if (c == '(') count++;
+            if (c == ')') count--;
+            if (count < 0) return false;
         }
 
         return count == 0;

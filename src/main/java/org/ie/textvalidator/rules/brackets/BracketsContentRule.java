@@ -16,21 +16,20 @@ public class BracketsContentRule implements ValidationRule {
     @Override
     public boolean validate(String text) {
         int count = 0;
-        StringBuilder content = new StringBuilder();
+        boolean hasContent = false;
 
         for (char c : text.toCharArray()) {
             if (c == '(') {
                 count++;
-                content.setLength(0);
+                hasContent = false;
             } else if (c == ')') {
-                if (content.toString().trim().isEmpty()) {
-                    return false;
-                }
-            } else if (count > 0) {
-                content.append(c);
+                if (count <= 0 || !hasContent) return false;
+                count--;
+            } else if (count > 0 && !Character.isWhitespace(c)) {
+                hasContent = true;
             }
         }
 
-        return true;
+        return count == 0;
     }
 }
